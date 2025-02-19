@@ -25,6 +25,7 @@ def find_the_place(coords):
     map_api_server = "https://static-maps.yandex.ru/v1"
     response = requests.get(map_api_server, params=map_params)
     image = BytesIO(response.content)
+    print(image)
     return image
 
 
