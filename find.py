@@ -1,4 +1,5 @@
 import requests
+from PIL import Image
 from scale import scale
 from io import BytesIO
 
@@ -26,6 +27,7 @@ def find_the_place(coords):
     response = requests.get(map_api_server, params=map_params)
     image = BytesIO(response.content)
     print(image)
+    image = Image.open(image)
     return image
 
 
