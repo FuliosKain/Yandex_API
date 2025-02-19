@@ -8,7 +8,7 @@ class MyApp(QtWidgets.QMainWindow):
     def __init__(self):
         super(MyApp, self).__init__()
         # Загружаем интерфейс из design.ui
-        uic.loadUi('design.ui', self)
+        uic.loadUi('maps.ui', self)
 
         # Получаем доступ к элементам интерфейса
         self.lineEdit = self.findChild(QtWidgets.QLineEdit, 'coord')  # Имя вашего QLineEdit
