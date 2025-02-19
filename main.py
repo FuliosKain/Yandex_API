@@ -56,10 +56,9 @@ class MyApp(QtWidgets.QMainWindow):
         print('Проверка Finde the place')
         image = (self.find_the_place(coords))
         print(image)
-        pixmap = QPixmap(image)
+        self.pixmap = QPixmap(self.map_file)
         print('Проверка1')
-        if not pixmap.isNull():
-            self.pixmap = QPixmap(self.map_file)
+        if not self.pixmap.isNull():
             self.image = QLabel(self)
             self.image.move(0, 0)
             self.image.resize(600, 450)
